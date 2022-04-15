@@ -26,6 +26,10 @@ public abstract class Unit : MonoBehaviour,
 
     private void Start()
     {
+        if (MainManager.Instance != null)
+        {
+            SetColor(MainManager.Instance.TeamColor);
+        }
 
     }
 
@@ -92,6 +96,6 @@ public abstract class Unit : MonoBehaviour,
 
     public virtual void GetContent(ref List<Building.InventoryEntry> content)
     {
-        
+
     }
 }
